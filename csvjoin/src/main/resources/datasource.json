@@ -1,0 +1,31 @@
+[
+	{
+		"EntityName":"leg",
+		"Pk":["tradeid","legnumber"],
+		"parentTable":"trade",
+		"jointype":"onetoMany",
+		"FK":["tradeid"],
+		"fileName":"leg.csv"
+	},
+	{
+		"EntityName":"trade",
+		"Pk":["tradeid"],
+		"fileName":"trade.csv"
+	},
+	{
+		"EntityName":"legchild",
+		"Pk":["tradeid","legnumber"],
+		"parentTable":"leg",
+		"jointype":"onetoOne",
+		"FK":["tradeid","legnumber"],
+		"fileName":"legchild.csv"
+	},
+	{
+		"EntityName":"legchild1",
+		"Pk":["tradeid","legnumber"],
+		"parentTable":"legchild",
+		"jointype":"onetoMany",
+		"FK":["tradeid","legnumber"],
+		"fileName":"legchild1.csv"
+	}
+]
